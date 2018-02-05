@@ -1,0 +1,814 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+
+		<!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame
+		Remove this if you use the .htaccess -->
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+		<title>index | productPage</title>
+		<meta name="description" content="">
+		<meta name="author" content="hello">
+
+		
+
+		<!-- Replace favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
+		<link rel="shortcut icon" href="/favicon.ico">
+		<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+		<link rel="stylesheet" type="text/css" href="css/init.css">
+		<link rel="stylesheet" type="text/css" href="css/layout_productPage.css">
+		<link rel="stylesheet" type="text/css" href="css/productPage.css">
+
+		<script type="text/javascript" src="./libs/jquery-1.7.1.min.js"></script>
+		<script type="text/javascript" src="./libs/jquery.easing.1.3.js"></script>
+		<script type="text/javascript" defer src="./js/banner_slider.js"></script>
+		<script type="text/javascript" defer src="./js/productMain.js"></script>
+		<script type="text/javascript" defer src="./js/pointer.js"></script>
+		<script type="text/javascript" defer src="./js/page.js"></script>
+		<script type="text/javascript" src="./js/jquery.zoom.min.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function() {
+				productPageController();
+			});
+			window.onload = function() {
+				var getHeight = $("#product_imgtb").css("height");
+				var imgWidth = parseInt($("#product_imgtb_left img").css("width")) / 2;
+				var imgHeight = parseInt($("#product_imgtb_left img").css("height")) / 2;
+				$("#product_imgtb_left, #product_imgtb_right").css("height", getHeight);
+				$("#product_imgtb_left img").css({
+					"margin-left" : -1 * imgWidth + "px",
+					"margin-top" : -1 * imgHeight + "px"
+				});
+				$(".tab_list_btn li:first").addClass("tab_on");
+					$(".tab_list_btn li").click(function(){
+					$(".tab_list_btn li").removeClass("tab_on");
+					$(this).addClass("tab_on");	
+				});
+
+
+				$(".product_btn_list2 li:first").addClass("btn_list_on");
+					$(".product_btn_list2 li").click(function(){
+					$(".product_btn_list2 li").removeClass("btn_list_on");
+					$(this).addClass("btn_list_on");	
+				});
+				
+			};
+			
+			
+			
+
+	</script>
+	
+	</head>
+
+	<body>
+		<div id="pointer">
+			&nbsp;
+		</div>
+		<!-- 상단 네비부분 Start -->
+		<div id="navArea">
+			<div id="navCenter">
+				<span class="addressFont">Tel : 02-3141-3111&nbsp;&nbsp;&nbsp;&nbsp; Fax : 02-1234-1234&nbsp;&nbsp;&nbsp;&nbsp; Email : Tatsuta@Tatsuta.com</span>
+				<div id="navWrap">
+					<a class="navTxt" href="login.html">로그인</a>
+					<a>|</a>
+					<a class="navTxt">회원가입</a>
+					<a>|</a>
+					<a class="navTxt">고객센터</a>
+					<a>|</a>
+					<a class="navTxt">즐겨찾기 추가</a>
+				</div>
+			</div>
+		</div>
+		<!-- 상단 네비부분 End -->
+
+		<!-- 상단 로고, 검색 영역 Start -->
+		<div id="headerWrap">
+			<div id="header">
+				<h1><a id="logo" href="index.html">이곳은 로고가 들어가는 부분입니다.</a></h1>
+				<div id="searchAlign">
+					<form>
+						<input type="text" id="searchBox">
+						<input type="button" id="searchBtn">
+					</form>
+					<a id="topNotice">[공지] 타츠타 쇼핑몰페이지가 오픈하였습니다.</a>
+				</div>
+				<div id="topAd_silder">
+					<a><img src="./img/ad_img1.jpg" alt="상단광고 이미지"></a>
+				</div>
+				<a href="#"><img src="img/fax.png" alt="팩스주문서식" class="fax" />
+			</div>
+		</div>
+		<!-- 상단 로고, 검색 영역 End -->
+
+		<!-- Contents Start -->
+		<div id="conWrap2">
+			<ul id="sideMenu">
+				<li class="on">
+					<p id="recentTitle">
+						최근 본 상품
+					</p>
+					<p id="recentProduct">
+						<img src="img/hitProduct1.jpg" alt="productImg">
+					</p>
+					<p id="recentPagination">
+						<a class="prevBtn">&lt;</a>
+						<a class="pageController">&nbsp;1/1&nbsp;</a>
+						<a class="nextBtn">&gt;</a>
+					</p>
+					<p id="recentAllpage">
+						전체보기
+					</p>
+				</li>
+				<li class="on">
+					<p id="likeTitle">
+						찜한 상품
+					</p>
+					<p id="likeProduct">
+						<img src="img/hitProduct1.jpg" alt="productImg">
+					</p>
+					<p id="likePagination">
+						<a class="prevBtn">&lt;</a>
+						<a class="pageController">&nbsp;1/1&nbsp;</a>
+						<a class="nextBtn">&gt;</a>
+					</p>
+					<p id="likeAllpage">
+						전체보기
+					</p>
+				</li>
+				<li>
+					<p id="topMover">
+						TOP ▲
+					</p>
+				</li>
+			</ul>
+			<div id="content_top">
+				<a>홈</a>
+				<span>&gt;</span>
+				<a>무급유드라이브체인</a>
+				<span>&gt;</span>
+				<a class="cate_on">람다체인(Lambda Chain)</a>
+			</div>
+			<div id="content_tb">
+				<div id="contnet_tbTOP">
+					<div id="content_tbTOP_navi">
+						&nbsp;
+					</div>
+					<ul class="tb_top_text">
+						<li id="tb_topText">
+							<span class="span_left">무급유 드라이브 체인 - 람다체인(Lambda Chain)</span>
+							<div class="tb_span_div">
+								<p>총 구매가격<span class="ara">94,195,000</span><span class="span_won">원</span></p>
+							</div>
+						</li>
+					</ul>
+					<div class="tb_top_wrap">
+						<div class="tb_top_left">
+							<div class="item_img_box">
+								<img src="img/chain_img1.jpg" alt="" />
+							</div>
+							<div class="item_explain">
+								<p class="explain_p">▶ 쓰바키 람다 체인은 업계 최초로 특수 오일 함유 부쉬를 채택한 체인입니다.<br />1988년에 발매를 시작한 이후, 다수의 업종과 용도에 채택되어 그 성능을 높이 평가 받고 있습니다.무급유, 장 수명에 대한 고객의 요구에 폭넓게 대응하여 전체 비용 절감에 성공하였습니다.</p>
+								<p class="explain_check">*RS80 사이즈 이상의 연결 링크는 분할핀형입니다.</p>
+								<p class="explain_check">*RS100 사이즈 이상은 본체부, 연결링크부가 모두 분할핀형입니다.</p>
+							</div>
+						</div>
+					<div class="tb_top_right">
+							<div class="tb_top_right_inner">
+								<div class="tb_top_right_t">
+									<p class="bae_info_p">배송정보</p>
+								</div>
+								<ul class="bae_list">
+									<li><span class="bae">배송비</span><span class="bae2">무료배송</span></li>
+									<li><span class="bae">평균배송일</span><span class="bae2">3일이내 배송가능<br />(토,일,공휴일 제외)</span></li>
+									<li><span class="bae">배송방법</span><span class="bae2">택배배송</span></li>
+									<li><span class="bae">배송보험</span><span class="bae2">없 음</span></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div id="popMenu">
+					<ul id="popList">
+						<li>
+							<p>
+								<a href="productList.html">기어 모터 - 소형 (Gear Motor)</a>
+								<span>/</span>
+								<a>GMTA 시리즈</a>
+								<span>/</span>
+								<a>크로제모터 - 웜가속기 (Croise Motor)</a>
+								<span>/</span>
+								<a>감속기(웜 파워 드라이브)</a>
+								<span>/</span>
+								<a>TD트로이드라이브(웜감속기, 소형,경량)</a>
+							</p>
+							<p>
+								<a>베벨감속기(마이타기어박스)</a>
+								<span>/</span>
+								<a>DISCO무단변속기</a>
+							</p>
+						</li>
+						<li>
+							<p>
+								<a>캠클러치(Back Stop)</a>
+							</p>
+							<p>
+								<a>SR클러치(Back Stop)</a>
+							</p>
+						</li>
+						<li>
+							<p>
+								<a>쇼크댐버 (Shock Damper)</a>
+								<span>/</span>
+								<a>파워실린더 (Power Cylinder)</a>
+								<span>/</span>
+								<a>파워쟈키 (Power Jackey)</a>
+							</p>
+							<p>
+								<a>서보모터용 정밀 유성감속기 (Servomoter-Reducers)</a>
+							</p>
+						</li>
+						<li>
+							<p>
+							<a>플렉스 커플링 (Flexible Coupling)</a>
+								<span>/</span>
+								<a>커플링 (Coupling)</a>
+								<span>/</span>
+								<a>플렉스 커플링 (Jaw-Flex )</a>
+								<span>/</span>
+								<a>롤라체인커플링 (Roller Chain)</a>
+								<span>/</span>
+								<a>나일론 체인 커플링(Nylon Chain)</a>
+							</p>
+							<p>
+								<a>과부하보호장치</a>
+								<span>/</span>
+								<a>파워록(Power-Lock.) 체결구</a>
+							</p>
+						</li>
+						<li>
+							<p>
+								<a>무급유체인 (Lambda Chain)</a>
+								<span>/</span>
+								<a>드라이브 체인 (Drive Chains)</a>
+								<span>/</span>
+								<a>드라이브 체인, 악세서리(Drive Chain Accessories)</a>
+								<span>/</span>
+								<a>탑체인 (Top Chains)</a>
+							</p>
+							<p>
+								<a>탑체인부품 (Top Chain Components)</a>
+								<span>/</span>
+								<a>소형 컨베어체인 (Small Size Conveyor Chains)</a>
+								<span>/</span>
+								<a>대형 컨베어체인 (Large Size Conveyor Chains)</a>
+								<span>/</span>
+								<a>케이블베어 (Cableveyor)</a>
+							</p>
+						</li>
+						<li>
+							<p>
+								buy_button <a>스프라켓 (Fit Bore Sprocket)</a>
+								<span>/</span>
+							<a>Look스프라켓 (Look Sprocket)</a>
+								<span>/</span>
+							<a>RS기준 스프라켓 (RS Standard  Sprocket)</a>
+								<span>/</span>
+								<a>내환경스프라켓 (Environment Resistant Series)</a>
+							</p>
+							<p>
+								<a>RF스프라켓 (RF Sprocket)</a>
+								<span>/</span>
+								<a>컨베어체인용 스프라켓 (Sprockets for Conveyor Chains)</a>
+								<span>/</span>
+								<a>탑체인전용 스프라켓 (Sprockets for Top Chains)</a>
+							</p>
+						</li>
+						<li>
+							<p>
+								<a>체인 타이트너 (Chain tightener)</a>
+								<span>/</span>
+								<a>플라스틱 레일 (Plastic Guide Rails)</a>
+								<span>/</span>
+								<a>타이밍벨트 (Timing Belts)</a>
+								<span>/</span>
+								<a>우레탄벨트 (Urethane Belt)</a>
+								<span>/</span>
+								<a>타이밍풀리 (Timing Pulley)</a>
+							</p>
+							<p>
+								<a>태형/치형 타이밍풀리 (Timing Pulley)</a>
+							</p>
+						</li>
+						<li>
+							<p>
+								<a>원터치 인스펙션도어 (One-Touch Inspection Door)</a>
+							</p>
+						</li>
+					</ul>
+				</div>
+				<div class="product_btn_box">
+					<div class="pro_stan_box">
+						<p><img src="img/stan_img.jpg" alt="" /><span>*LMD-2(2열)은 직접 문의하여 주십시오</span></p>
+					</div>
+				</div>
+				<div class="product_main">
+					<form>
+						<fieldset>
+							<legend class="hide">상품상세</legend>
+								<div class="table_tab_wrap">
+									<div class="table_tab">
+										<p class="price_order">가격표 및 상품주문</p>
+										<p class="lambda">●TTUP형 플라스틱 탑체인</p>
+										<table class="sec_table">
+											<caption class="hide">가격표 및 상품주문</caption>
+											<colgroup>
+												<col width="20%"/>
+												<col width="15%" />
+												<col width="15%" />
+												<col width="15%" />
+												<col width="15%" />
+												<col width="15%" />
+											</colgroup>
+											<tbody>
+												<tr>
+													<th rowspan="2">품번</th>
+													<th colspan="2">가격</th>
+													<th rowspan="2">탑 플레이트 넓이</th>
+													<th rowspan="2">외관색</th>
+													<th rowspan="2">최대 허용 장력</th>
+												</tr>
+												<tr>
+													<th>1유닛</th>
+													<th>1링크</th>
+												</tr>
+												<tr>
+													<td class="td_bold">TTUP826</td>
+													<td>
+														<label for="">¥23,920</label>
+														<input type="checkbox" name="" id="" class="td_check" />
+													</td>
+													<td>
+														<label for="">¥299</label>
+														<input type="checkbox" name="" id="" class="td_check" />
+													</td>
+													<td rowspan="7">82.6</td>
+													<td rowspan="21">그레이<br />그린<br />브라운<br />블루</td>
+													<td rowspan="21">1.08KN</td>
+												</tr>
+												<tr>
+													<td class="td_bold">TTUP826-LFG</td>
+													<td>
+														<label for="">26,160</label>
+														<input type="checkbox" name="" id="" class="td_check" />
+													</td>
+													<td>
+														<label for="">¥327</label>
+														<input type="checkbox" name="" id="" class="td_check" />
+													</td>
+												</tr>
+												<tr>
+													<td class="td_bold">TTUP826-LFB</td>
+													<td>
+														<label for="">26,160</label>
+														<input type="checkbox" name="" id="" class="td_check" />
+													</td>
+													<td>
+														<label for="">¥327</label>
+														<input type="checkbox" name="" id="" class="td_check" />
+													</td>
+												</tr>
+												<tr>
+													<td class="td_bold">TTUP826-LFW</td>
+													<td>
+														<label for="">29,440</label>
+														<input type="checkbox" name="" id="" class="td_check" />
+													</td>
+													<td>
+														<label for="">¥327</label>
+														<input type="checkbox" name="" id="" class="td_check" />
+													</td>
+												</tr>
+												<tr>
+													<td class="td_bold">TTUP826-ULF</td>
+													<td>
+														<label for="">-</label>
+														<input type="checkbox" name="" id="" class="td_check" />
+													</td>
+													<td>
+														<label for="">¥368</label>
+														<input type="checkbox" name="" id="" class="td_check" />
+													</td>
+												</tr>
+												<tr>
+													<td class="td_bold">TTUP826-DIA</td>
+													<td>
+														<label for="">-</label>
+														<input type="checkbox" name="" id="" class="td_check" />
+													</td>
+													<td>
+														<label for="">¥395</label>
+														<input type="checkbox" name="" id="" class="td_check" />
+													</td>
+												</tr>
+												<tr>
+													<td class="td_bold">TTUP826-LFG</td>
+													<td>
+														<label for="">-</label>
+														<input type="checkbox" name="" id="" class="td_check" />
+													</td>
+													<td>
+														<label for="">¥898</label>
+														<input type="checkbox" name="" id="" class="td_check" />
+													</td>
+												</tr>
+												<tr>
+													<td class="td_bold">TTUP1143</td>
+													<td>
+														<label for="">¥31,600</label>
+														<input type="checkbox" name="" id="" class="td_check" />
+													</td>
+													<td>
+														<label for="">¥395</label>
+														<input type="checkbox" name="" id="" class="td_check" />
+													</td>
+													<td rowspan="7">114.3</td>
+												</tr>
+												<tr>
+													<td class="td_bold">TTUP1143-LFG</td>
+													<td>
+														<label for="">¥34,880</label>
+														<input type="checkbox" name="" id="" class="td_check" />
+													</td>
+													<td>
+														<label for="">¥436</label>
+														<input type="checkbox" name="" id="" class="td_check" />
+													</td>
+												</tr>
+												<tr>
+													<td class="td_bold">TTUP1143-LFB</td>
+													<td>
+														<label for="">¥34,880</label>
+														<input type="checkbox" name="" id="" class="td_check" />
+													</td>
+													<td>
+														<label for="">¥436</label>
+														<input type="checkbox" name="" id="" class="td_check" />
+													</td>
+												</tr>
+												<tr>
+													<td class="td_bold">TTUP1143-LFW</td>
+													<td>
+														<label for="">-</label>
+														<input type="checkbox" name="" id="" class="td_check" />
+													</td>
+													<td>
+														<label for="">¥436</label>
+														<input type="checkbox" name="" id="" class="td_check" />
+													</td>
+												</tr>
+												<tr>
+													<td class="td_bold">TTUP1143-ULF</td>
+													<td>
+														<label for="">¥38,080</label>
+														<input type="checkbox" name="" id="" class="td_check" />
+													</td>
+													<td>
+														<label for="">¥476</label>
+														<input type="checkbox" name="" id="" class="td_check" />
+													</td>
+												</tr>
+												<tr>
+													<td class="td_bold">TTUP1143-DIA</td>
+													<td>
+														<label for="">-</label>
+														<input type="checkbox" name="" id="" class="td_check" />
+													</td>
+													<td>
+														<label for="">¥518</label>
+														<input type="checkbox" name="" id="" class="td_check" />
+													</td>
+												</tr>
+												<tr>
+													<td class="td_bold">TTUP1143-DIY</td>
+													<td>
+														<label for="">-</label>
+														<input type="checkbox" name="" id="" class="td_check" />
+													</td>
+													<td>
+														<label for="">¥1,190</label>
+														<input type="checkbox" name="" id="" class="td_check" />
+													</td>
+												</tr>
+												<tr>
+													<td class="td_bold">TTUP1905</td>
+													<td>
+														<label for="">¥39,120</label>
+														<input type="checkbox" name="" id="" class="td_check" />
+													</td>
+													<td>
+														<label for="">¥489</label>
+														<input type="checkbox" name="" id="" class="td_check" />
+													</td>
+													<td rowspan="7">190.5</td>
+												</tr>
+												<tr>
+													<td class="td_bold">TTUP1905-LFG</td>
+													<td>
+														<label for="">¥43,520</label>
+														<input type="checkbox" name="" id="" class="td_check" />
+													</td>
+													<td>
+														<label for="">¥544</label>
+														<input type="checkbox" name="" id="" class="td_check" />
+													</td>
+												</tr>
+												<tr>
+													<td class="td_bold">TTUP1905-LFB</td>
+													<td>
+														<label for="">¥43,520</label>
+														<input type="checkbox" name="" id="" class="td_check" />
+													</td>
+													<td>
+														<label for="">¥544</label>
+														<input type="checkbox" name="" id="" class="td_check" />
+													</td>
+												</tr>
+												<tr>
+													<td class="td_bold">TTUP1905-LFW</td>
+													<td>
+														<label for="">-</label>
+														<input type="checkbox" name="" id="" class="td_check" />
+													</td>
+													<td>
+														<label for="">¥544</label>
+														<input type="checkbox" name="" id="" class="td_check" />
+													</td>
+												</tr>
+												<tr>
+													<td class="td_bold">TTUP1905-ULF</td>
+													<td>
+														<label for="">-</label>
+														<input type="checkbox" name="" id="" class="td_check" />
+													</td>
+													<td>
+														<label for="">¥599</label>
+														<input type="checkbox" name="" id="" class="td_check" />
+													</td>
+												</tr>
+												<tr>
+													<td class="td_bold">TTUP1905-DIA</td>
+													<td>
+														<label for="">-</label>
+														<input type="checkbox" name="" id="" class="td_check" />
+													</td>
+													<td>
+														<label for="">¥639</label>
+														<input type="checkbox" name="" id="" class="td_check" />
+													</td>
+												</tr>
+												<tr>
+													<td class="td_bold">TTUP1905-DIY</td>
+													<td>
+														<label for="">-</label>
+														<input type="checkbox" name="" id="" class="td_check" />
+													</td>
+													<td>
+														<label for="">¥1,470</label>
+														<input type="checkbox" name="" id="" class="td_check" />
+													</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</div>
+								<div class="estimate">
+									<div class="estimate_left">
+										<p class="estimate_p">견적내용</p>
+									</div>
+									<div class="estimate_right">
+										<table summary="견적내용" class="estimate_table">
+											<tr>
+												<th width="20%">체인품명</th>
+												<th width="15%">주문품번</th>
+												<th width="10%">가격</th>
+												<th width="30%">수량</th>
+												<th width="15%">합계</th>
+												<th width="10%">삭제</th>
+											</tr>
+											<tr>
+												<td>RS 40-LMD-1</td>
+												<td>40LMD1U</td>
+												<td>¥12,900</td>
+												<td>
+													<label for="" class="hide">수량</label>
+													<input type="text" name="productNum" id="productNum" value="0" readonly class="pro_num">
+													<input type="button" name="productPlusbtn" class="plusBtn" value="+">
+													<input type="button" name="productMinusbtn" class="minusBtn" value="-">
+												</td>
+												<td>¥12,900</td>
+												<td><a href="#"><img src="img/del_close.jpg" alt="닫기" /></a></td>
+											</tr>
+											<tr>
+												<td>RS 40-LMD-1</td>
+												<td>40LMD1JL</td>
+												<td>¥15,500</td>
+												<td>
+													<label for="" class="hide">수량</label>
+													<input type="text" name="productNum" id="productNum" value="0" readonly class="pro_num">
+													<input type="button" name="productPlusbtn" class="plusBtn" value="+">
+													<input type="button" name="productMinusbtn" class="minusBtn" value="-">
+												</td>
+												<td>¥15,500</td>
+												<td><a href="#"><img src="img/del_close.jpg" alt="닫기" /></a></td>
+											</tr>
+											<tr>
+												<td>RS 40-LMD-1</td>
+												<td>40LMD1OL</td>
+												<td>¥20,200</td>
+												<td>
+													<label for="" class="hide">수량</label>
+													<input type="text" name="productNum" id="productNum" value="0" readonly class="pro_num">
+													<input type="button" name="productPlusbtn" class="plusBtn" value="+">
+													<input type="button" name="productMinusbtn" class="minusBtn" value="-">
+												</td>
+												<td>¥20,200</td>
+												<td><a href="#"><img src="img/del_close.jpg" alt="닫기" /></a></td>
+											</tr>
+											<tr>
+												<td>RS 50-LMD-1</td>
+												<td>50LMD1U</td>
+												<td>¥31,400</td>
+												<td>
+													<label for="" class="hide">수량</label>
+													<input type="text" name="productNum" id="productNum" value="0" readonly class="pro_num">
+													<input type="button" name="productPlusbtn" class="plusBtn" value="+">
+													<input type="button" name="productMinusbtn" class="minusBtn" value="-">
+												</td>
+												<td>¥31,400</td>
+												<td><a href="#"><img src="img/del_close.jpg" alt="닫기" /></a></td>
+											</tr>
+										</table>
+									</div>
+								<div class="estimate_clear_box">
+									<div class="estimate_result">
+										<p><img src="img/estimate_result.jpg" alt="미리계산" />총 상품구매 <span class="result_won">94,195,000원</span></p>
+									</div>
+								</div>
+								<div class="estimate_btn_box">
+									<input type="button" name="" id="" class="goo" />
+									<input type="button" name="" id="" class="jang" />
+									<input type="button" name="" id="" class="inter" />
+								</div>
+							</div>
+						</fieldset>
+					</form>
+				</div>
+				<ul class="tab_list_btn">
+					<li class="tab1_view"><a href="#">제품카다로그 한국어</a></li>
+					<li class="tab2_view"><a href="#">일본TATSUTA 카다로그</a></li>
+				</ul>
+				<script>
+					$(document).ready(function(){
+						$(".rolling_page:last").prependTo(".rolling");
+						$(".rolling").css("margin-left","-700px");
+						
+							// next event
+						$(".slide_next").click(function(){
+							$(".rolling").animate({
+								marginLeft:parseInt($(".rolling:not(:animated)").css("margin-left"))-700+"px"	
+							},400,function(){
+								$(".rolling").css("margin-left","-700px");
+								$(".rolling_page:first").appendTo(".rolling");	
+							});
+							
+				
+						});	
+							
+						$(".slide_prev").click(function(){
+							$(".rolling").animate({
+								marginLeft:parseInt($(".rolling:not(:animated)").css("margin-left"))+700+"px"	
+							},400,function(){
+								$(".rolling").css("margin-left","-700px");
+								$(".rolling_page:last").prependTo(".rolling");	
+							});	
+							
+						});
+						$(".rolling_page2:last").prependTo(".rolling2");
+						$(".rolling2").css("margin-left","-700px");
+						
+							// next event
+						$(".slide_next2").click(function(){
+							$(".rolling2").animate({
+								marginLeft:parseInt($(".rolling2:not(:animated)").css("margin-left"))-700+"px"	
+							},400,function(){
+								$(".rolling2").css("margin-left","-700px");
+								$(".rolling_page2:first").appendTo(".rolling2");	
+							});
+							
+				
+						});	
+							
+						$(".slide_prev2").click(function(){
+							$(".rolling2").animate({
+								marginLeft:parseInt($(".rolling2:not(:animated)").css("margin-left"))+700+"px"	
+							},400,function(){
+								$(".rolling2").css("margin-left","-700px");
+								$(".rolling_page2:last").prependTo(".rolling2");	
+							});	
+							
+						});
+						$(".pro_bottom > div:not(:first)").hide();
+						$(".tab1_view").click(function(){
+							$(".pro_bottom > div").hide()
+							$(".probottom_tab1").show();
+							return false;	
+						});
+						$(".tab2_view").click(function(){
+							$(".pro_bottom > div").hide()
+							$(".probottom_tab2").show();
+							return false;	
+						});
+						
+						$('#ex1').zoom({ on:'click' });	
+						$('#ex2').zoom({ on:'click' });
+						$('#ex3').zoom({ on:'click' });
+						$('#ex4').zoom({ on:'click' });
+						$('#ex5').zoom({ on:'click' });
+						$('#ex6').zoom({ on:'click' });
+						
+					});
+
+					
+						
+					
+					
+				</script>
+				<div class="pro_bottom">
+					<div class="probottom_tab1">
+						<div class="main_rolling">
+							<ul class="rolling">
+								<li class="rolling_page zoom" id="ex1"><img src="img/cata/54.jpg" alt="" /></li>
+								<li class="rolling_page zoom" id="ex2"><img src="img/cata/55.jpg" alt="" /></li>
+								<li class="rolling_page zoom" id="ex3"><img src="img/cata/56.jpg" alt="" /></li>
+							</ul>
+							<p class="slide_prev"><img src="img/slide_prev.jpg" alt="" /></p>
+							<p class="slide_next"><img src="img/slide_next.jpg" alt="" /></p>
+						</div>
+					</div>
+					<div class="probottom_tab2">
+						<div class="main_rolling2">
+							<ul class="rolling2">
+								<li class="rolling_page2 zoom" id="ex4"><img src="img/chain_jp.jpg" alt="" /></li>
+								<li class="rolling_page2 zoom" id="ex5"><img src="img/chain_jp2.jpg" alt="" /></li>
+								<li class="rolling_page2 zoom" id="ex6"><img src="img/chain_jp3.jpg" alt="" /></li>
+							</ul>
+							<p class="slide_prev2"><img src="img/slide_prev.jpg" alt="" /></p>
+							<p class="slide_next2"><img src="img/slide_next.jpg" alt="" /></p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Contents End -->
+
+		<!-- footer Start -->
+		<!-- 회사소개, 이용약관등등 -->
+		<div id="footerWrap">
+			<div id="footer">
+				<div id="footTxt">
+					<a class="navTxt">회사소개</a>
+					<a>|</a>
+					<a class="navTxt">이용약관</a>
+					<a >|</a>
+					<a class="navTxt">개인정보취급방침</a>
+					<a>|</a>
+					<a class="navTxt">이메일무단수집거부</a>
+				</div>
+			</div>
+		</div>
+		<!-- footer end -->
+
+		<!-- copy Start -->
+		<!-- 저작권부분 -->
+		<div id="copy">
+			<p class="tatsutaLogo">&nbsp;
+				
+			</p>
+			<div class="addr">
+				<p>
+					서울특별시 마포구 독막로 129 균빌딩 5층 타츠타 대표이사 박민희 통신판매업신고 : 麻浦第000000号
+				</p>
+				<p>
+					TEL: 02-1234-1234&nbsp;&nbsp;&nbsp; FAX: 02-1234-1234&nbsp;&nbsp;&nbsp; MAIL : tatsuta@tatsuta.com
+				</p>
+			</div>
+			<p id="copyTxt">
+				Copyright ⓒ TATSUTA.  All Rights Reserved.
+			</p>
+		</div>
+
+		<!-- copy End -->
+	</body>
+</html>

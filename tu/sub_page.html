@@ -1,0 +1,238 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="utf-8">
+<title>Tsubaki</title>
+<link rel="stylesheet" type="text/css" href="css/reset.css" />
+<link rel="stylesheet" type="text/css" href="css/common.css" />
+<link rel="stylesheet" type="text/css" href="css/style.css" />
+<script type="text/javascript" src="js//jquery-1.9.1.js"></script>
+<script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+<script type="text/javascript" src="js/page.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){ 
+			initEventListener();	
+		});
+
+		
+		
+		// 버튼에 이벤트를 리스너를 등록합니다.
+		function initEventListener(){
+			$(".lnb li a").click(function(e){ 
+				
+				// 버튼이 눌러지는 경우 페이지를 로딩합니다.
+				loadPage($(this).attr("data"));	
+				return false;
+			});
+		}
+		// 페이지를 로딩하는 함수입니다.
+		function loadPage(strPage){
+			$.post(strPage, null, addPage, "html");
+			
+		}
+	
+		function addPage(strInfo){
+			$("#sub_right").html(strInfo);
+		}
+</script>
+</head>
+<!-- made by C.N.I -->
+<body>
+	<div id="header">
+		<div class="h_top">
+			<div class="h_top_inner">
+				<h1 class="logo"><a href="index.html"><img src="img/logo.jpg" alt="tsubaki" /></a></h1>
+				<form>
+					<fieldset>
+						<legend class="hide">검색</legend>
+						<ul class="lnb">
+							<li class="search">
+								<div class="search_img">검색</div>
+								<div class="search_box">
+									<legend for="" class="hide">검색</legend>
+									<input type="text" name="" id="" class="search_input" value="" />
+									<input type="button" name="" id="" class="search_btn" value="" />
+								</div>
+							</li>
+							<li class="all_menu"></li>
+							<li class="tsubaki"><a href="#"><img src="img/tsubaki.jpg" alt="tsubaki homepage link" /></a></li>
+						</ul>
+					</fieldset>
+				</form>
+			</div> <!-- h_top_inner end -->
+		</div> <!-- h_top end -->
+		<div class="h_middle">
+			<div class="h_middle_inner">
+				<h2 class="hide">메인메뉴</h2>
+				<div class="gnb_wrap">
+					<ul class="gnb">
+						<li class="gnb1"><a href="#"><img src="img/sub_gnb1.png" alt="" /></a></li>
+						<li class="gnb2"><a href="#"><img src="img/sub_gnb2.png" alt="" /></a></li>
+						<li class="gnb3"><a href="#"><img src="img/sub_gnb3.png" alt="" /></a></li>
+						<li class="gnb4"><a href="#"><img src="img/sub_gnb4.png" alt="" /></a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="h_bottom">
+			<div class="h_bottom_inner">
+				<div class="snb_wrap">
+					<ul class="snb">
+						<li><a href="#"><img src="img/snb1.png" alt="" /></a></li>
+						<li><a href="#"><img src="img/snb2.png" alt="" /></a></li>
+						<li><a href="#"><img src="img/snb3.png" alt="" /></a></li>
+						<li><a href="#"><img src="img/snb4.png" alt="" /></a></li>
+						<li><a href="#"><img src="img/snb5.png" alt="" /></a></li>
+						<li><a href="#"><img src="img/snb6.png" alt="" /></a></li>
+						<li><a href="#"><img src="img/snb7.png" alt="" /></a></li>
+						<li><a href="#"><img src="img/snb8.png" alt="" /></a></li>
+						<li><a href="#"><img src="img/snb9.png" alt="" /></a></li>
+						<li><a href="#"><img src="img/snb10.png" alt="" /></a></li>
+						<li><a href="#"><img src="img/snb11.png" alt="" /></a></li>
+						<li><a href="#"><img src="img/snb12.png" alt="" /></a></li>
+						<li><a href="#"><img src="img/snb13.png" alt="" /></a></li>
+						<li><a href="#"><img src="img/snb14.png" alt="" /></a></li>
+					</ul>
+				</div>
+				<div class="snb_wrap"></div>
+				<div class="snb_wrap">
+					<ul class="snb snb_right">
+						<li><a href="#"><img src="img/sub_3_1.png" alt="" /></a></li>
+						<li><a href="#"><img src="img/sub_3_2.png" alt="" /></a></li>
+						<li><a href="#"><img src="img/sub_3_3.png" alt="" /></a></li>
+						<li><a href="#"><img src="img/sub_3_4.png" alt="" /></a></li>
+					</ul>
+				</div>
+				<div class="snb_wrap">
+					<ul class="snb snb_right">
+						<li><a href="#"><img src="img/sub_4_1.png" alt="" /></a></li>
+						<li><a href="#"><img src="img/sub_4_2.png" alt="" /></a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="pointer_wrap">
+			<img src="img/pointer.png" alt="" class="pointer" />
+		</div> 
+	</div> <!-- header end -->
+	<div id="contents">
+		<div class="sub_banner">
+			<img src="img/sub_banner.jpg" alt="" />
+		</div>
+		<div class="sub_contents">
+			<div id="lnb">
+				<h3><img src="img/h3_product_info.png" alt="product infomation" /></h3>	
+				<p class="lnb_p">일반 산업용 부품</p>
+				<ul class="lnb_list">
+					<li><a href="#">드라이브 체인</a>
+						<ul class="lnb_2_list">
+							<li><a href="#">범용 드라이브 체인</a>
+								<ul class="lnb_3_list">
+									<li><a href="#">범용 드라이브 체인</a></li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+					<li><a href="#">소형 컨베이어 체인</a>
+						<ul class="lnb_2_list">
+							<li><a href="#">범용 드라이브 체인</a>
+								<ul class="lnb_3_list">
+									<li>범용 드라이브 체인</li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+					<li><a href="#">대형 컨베이어 체인</a></li>
+					<li><a href="#">톱 체인</a></li>
+					<li><a href="#">스프로킷</a></li>
+					<li><a href="#">케이블·호스지지 안내 장치</a></li>
+					<li><a href="#">타이밍 벨트</a></li>
+					<li><a href="#">풀리</a></li>
+					<li><a href="#">감속기·변속기</a></li>
+					<li><a href="#">체결구</a></li>
+					<li><a href="#">커플링</a></li>
+					<li><a href="#">직선 작동기</a></li>
+					<li><a href="#">클러치</a></li>
+					<li><a href="#">과부하 보호 기기</a></li>
+					<li><a href="#">츠바키 업계 납입 사례 사이트</a></li>
+				</ul>
+			</div> <!-- lnb end -->
+			<div id="sub_right" class="sub_right_inner">
+				<div class="info_box">
+					<h4><img src="img/h4_1.png" alt="드라이브체인" /></h4>
+					<p>드라이브 체인과 스프로킷을 통해 모터 등의 동력을 긴장으로 피 동기에 전달하는 기계 요소 입니다. 큰 감속비를 업을 수 있는 측간 거리의 자유도가 높은 양면 사용할 수 다축 전동이 가능 등 뛰어난 특징을 가지고 있습니다.</p>
+				</div>
+				<ul class="pro_list">
+					<li>
+						<a href="#"><img src="img/drive_1.jpg" alt="" /></a>
+						<div>
+							<h5>범용 드라이브 체인</h5>
+							<p class="info_p">JIS, ANSI, ISO에 준거 한 세계 표준의 드라이브 체인. 최신 모델의 G7-EX (RS40 ~ 240)는 기존 제품에 비해 마모 수명을 2배 전동 능력 33% 향상을 실현했습니다. BS/DIN 규격의 체인도 구비하고 있습니다.</p>
+							<p class="line_up"><a href="#">Line-up</a></p>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="img/drive_2.jpg" alt="" /></a>
+						<div>
+							<h5>무급유 드라이브 체인</h5>
+							<p class="info_p">동백 람다 체인은 업계 최초로 특수 함유 부시를 채용 한 체인입니다. 출시 이후 많은 업종·용도에 채용되어 그 성능을 인정 받고 있습니다. 무급유·긴 수명에 대한 고객의 요구에 폭넓게 대응하고 총 비용 절감에 기여합니다.</p>
+							<p class="line_up"><a href="#">Line-up</a></p>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="img/drive_3.jpg" alt="" /></a>
+						<div>
+							<h5>강력 드라이브 체인</h5>
+							<p class="info_p">강력한 드라이브 체인은 플레이트 형상과 두께를 크게하는 것으로, 컴팩트 한 디자인이면서 뛰어난 전동 능력, 허용 하중, 인장 강도를 실현. 다양한 제품 구색에서 다양한 요구에 부응합니다.</p>
+							<p class="line_up"><a href="#">Line-up</a></p>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="img/drive_4.jpg" alt="" /></a>
+						<div>
+							<h5>내 환경 드라이브 체인</h5>
+							<p class="info_p">부식 분위기 등의 내 환경성이 요구되는 용도로 사용하실 체인. 스테인레스 사양, 각종 코팅 사양, 저소음 체인, 내한 체인 등 다양하게 구색하고 있습니다.</p>
+							<p class="line_up"><a href="#">Line-up</a></p>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="img/drive_5.jpg" alt="" /></a>
+						<div>
+							<h5>특수 체인</h5>
+							<p class="info_p">랙 & 피니언 기어 대신에 사용되는 핀 기어 드라이브 체인과 주로 매달아 용도로 사용되는 잎 체인, 가로 방향으로 크게 구부리 카브 체인 등이 있습니다.</p>
+							<p class="line_up"><a href="#">Line-up</a></p>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="img/drive_6.jpg" alt="" /></a>
+						<div>
+							<h5>드라이브 체인 악세사리</h5>
+							<p class="info_p">드라이브 체인 액세서리로 체인 텐셔너, 각종 잘라 이어 · 연결 공구 터미널 손잡이 자동 급유기 체인 마모 측정 스케일과 동심도 용이지 레이저 등 풍부하게 라인 업하고 있습니다</p>
+							<p class="line_up"><a href="#">Line-up</a></p>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div> <!-- sub_contents end -->
+	</div>
+	<div id="footer">
+		<div class="f_inner">
+			<div class="f_left">
+				<img src="img/f_logo.png" alt="" />
+				<p><span>© 2014 TSUBAKIMOTO CHAIN CO. All Rights Reserved.</span><br />서울시 강남구 역삼동 707-37 한신인터밸리 24 동관 1004,1005호<br />#1004,1005 East Wing. Hansin Intervally 24 Yeoksam-dong.<br />Gangnam-gu. Seoul. Korea</p>
+			</div>
+			<div class="f_right">
+				<p class="contact_info"><img src="img/contact_info.png" alt="" /></p>
+				<ul class="contact_list">
+					<li class="phone">+82-02-2183-0313</li>
+					<li class="mail">info@tsubakimoto.jp</li>
+				</ul>
+				<p><a href="#">개인정보방침</a></p>
+			</div>
+		</div>
+	</div>
+	<div id="sideMenu">
+		<img src="img/quick.png" alt="" />
+	</div>
+</body>
+</html>

@@ -1,0 +1,126 @@
+@charset "utf-8";
+/* CSS Document */
+
+@font-face {
+	font-family: 'NanumGothic';
+	font-style: normal;
+	font-weight: normal;
+	src: url('./NanumGothic.eot');
+	src: local('?'), url('./NanumGothic.woff') format('woff'), url('./NanumGothic.ttf') format('truetype');
+} 
+body,h1,h2,h3,h4,h5,h6,label{font-family:NanumGothic;}
+
+#navArea {background-color: #fff;width: 100%;height: 27px;border-bottom: 1px solid #dbdbdb;}
+.pageController{letter-spacing:0.5px;*font-size:13px;	*font-weight:normal;*font-size:13px \0/;}
+#navCenter {margin: 0 auto;width: 1000px;}
+#navCenter span {line-height: 27px;}
+#navCenter .addressFont {float: left;font-size: 11px;color: #919191;cursor: default;}
+#navCenter #navWrap {float: right;font-family: 'NanumGothic', monospace;}
+#navWrap a {color: #747474;font-size: 7px;line-height: 27px;letter-spacing: -0.2px;font-family:Dotum;}
+#navWrap a:hover {cursor: pointer;}
+#navWrap .navTxt {font-size: 11px;}
+#headerWrap {background-color: #fbfbfb;width: 100%;height: 105px;border-bottom: 3px solid #00a0f7;}
+#header {margin: 0 auto;width: 1000px;position:relative;}
+#header h1 {float: left;position: relative;top: 32px;}
+#logo {display: block;text-indent: -9999px;width: 150px;height: 32px;margin-left: 32px;background: url("../img/tsubaki_logo.png") no-repeat 0 0;}
+#logo:hover {cursor: pointer;}
+#searchBox {position: relative;display: block;float: left;margin-top: 22px;margin-bottom: 0;width: 477px;height: 42px;font-size: 20px;padding: 0 10px 0 10px;*line-height: 42px;line-height: 42px \0/;border: 1px solid #d0d0d0;}
+#searchAlign {float: left;position: relative;margin-left: 81px;height: 105px;width: 499px}
+#recentTitle, #likeTitle {line-height:29px;color:#5f6570;font-size:11px;letter-spacing:-1px;text-align:center;}
+#topMover {line-height: 29px;color: #317feb;font-size: 12px;letter-spacing: 0;font-weight: 700;text-align: center;font-family: 'Nanum Gothic', monospace;}
+#topMover:hover {cursor: pointer;}
+#recentProduct, #likeProduct {width: 58px;height: 58px;border: 1px solid #d3d5d3;overflow: hidden;margin: 0 auto;}
+#recentProduct:hover, #likeProduct:hover {cursor: pointer;}
+#recentProduct img, #likeProduct img {width: 50px;margin: 5px;}
+#recentPagination, #likePagination {margin-top: 2px;text-align: center;font-size: 14px;letter-spacing: -0.8px;cursor: default;}
+.prevBtn, .nextBtn {font-size: 7pt;*font-size:9pt;*letter-spacing:-2pt;font-weight: 500;}
+.prevBtn:hover, .nextBtn:hover {cursor: pointer;}
+#recentAllpage, #likeAllpage {text-align: center;color: #317feb;margin-top: 5px;font-size: 10.5px;font-size: 12px;letter-spacing: -0.4px;font-family: 'Nanum Gothic', monospace;}
+#recentAllpage:hover, #likeAllpage:hover {cursor: pointer;}
+#topNotice {float: left;font-size: 11px;margin-top: 8px;letter-spacing:-1px;font-family:Dotum;}
+#topNotice:hover {cursor: pointer;color: #00A0F7;}
+#header #topAd_silder {float: right;overflow: hidden;height: 104px;}
+#topAd_silder:hover {cursor: pointer;}
+#conWrap {position: relative;width: 1000px;margin: 0 auto;background: url("../img/lineBg.jpg") repeat-y 0 0;}
+#conWrap2 {position: relative;width: 1000px;margin: 0 auto;}
+#conWrap:after {content: "";clear: both;display: block;}
+#footerWrap {clear:both;width: 100%;height: 27px;background-color: #fff;border-top: 1px solid #f1f1f1;border-bottom: 1px solid #f1f1f1;}
+#footer {width: 1000px;height: 27px;margin: 0 auto;}
+#footTxt {margin-left: 30px;}
+#footTxt a {color: #747474;font-size: 7px;line-height: 27px;letter-spacing: -0.4px;font-family:Dotum;}
+#footTxt .navTxt {font-size: 11px;}
+#footTxt .navTxt:hover {cursor: pointer;}
+#searchBtn {position: absolute;display: block;right: 12px;top: 34px;background: url("../img/searchBtn.jpg") no-repeat 0 0;border: 0 none;width: 25px;height: 21px;margin-bottom: 0;}
+#searchBtn:hover {cursor: pointer;}
+#copy {width: 1000px;margin: 0 auto;}
+#copy .tatsutaLogo {float: left;margin-top: 24px;margin-left: 40px;width: 111px;height: 37px;background: url("../img/tatsutaLogo.jpg") no-repeat 0 0;}
+.addr {float: left;margin-left: 36px;margin-top: 26px;}
+.addr p {line-height: 18px;font-size: 11px;letter-spacing: -0.2px;color: #4f4d4d;}
+#copyTxt {padding-top: 30px;padding-bottom: 10px;font-size: 12px;text-align: center;margin: 0 auto;color: #131313;clear: both; }
+
+
+
+/* LNB */
+#lnb{position:absolute;z-index:9;float:left;height:315px;}
+#gnbCon{left:150px;width:850px;position:relative;}
+#gnbCon:after{content:"";display:block;clear:both;}
+#a{float:left;width:150px;background:red;}
+#b{float:left;width:150px;background:#f00;}
+#popMenu{display:none;position:absolute;left:0;top:0;padding-left:150px;z-index:1000;width:850px;height:567px;background:url("../img/popBg.jpg") no-repeat 0 0;}
+.s_popMenu{left:1px !important;top:83px !important;}
+#subMenu{display:none;float:left;margin-top:-1px;background:#fff;border:1px solid #00A0F7;padding-top:10px;width:300px;height:305px;}
+#menu{float:left;}
+#subMenu:hover{cursor:default;}
+#subMenu a{display:block;text-indent:10px;font-size:11px;line-height:26px;letter-spacing:-0.4px;}
+#subMenu a:hover{cursor:pointer;}
+#popList li{padding:20px 0 0 15px;width:834px;height:50px;}
+#popList span{font-size:5px;}
+#popList a{	font-size:11px;}
+#closeBtn{position:absolute;left:-24px;top:0;width:24px;height:24px;background:url("../img/closeBtn.jpg") no-repeat 0 0;}
+#closeBtn:hover{cursor:pointer;}
+#popList a:hover{cursor:pointer;color:#00A0F7;}
+#menu > li > a{display:block;width:150px;height:35px;}
+#lnb li:hover{cursor:pointer;}
+#quickWrap{float:left;width:168px;overflow:hidden;}
+#quickWrap div:hover{cursor:pointer;	}
+#quickOrder{height:158px;background:url("../img/quickOrder.jpg") no-repeat 0 0;}
+#qnaBtn{height:158px;background:url("../img/qnaBtn.jpg") no-repeat 0 0;}
+#gnbWrap{border-bottom:1px solid #efefef;height:315px;}
+#list1{width:150px;height:35px;background:url("../img/lnb/lnb1.jpg") no-repeat 0 0;}
+#list2{width:150px;height:35px;background:url("../img/lnb/lnb2.jpg") no-repeat 0 0;}
+#list3{width:150px;height:35px;background:url("../img/lnb/lnb3.jpg") no-repeat 0 0;}
+#list4{width:150px;height:35px;background:url("../img/lnb/lnb4.jpg") no-repeat 0 0;}
+#list5{width:150px;height:35px;background:url("../img/lnb/lnb5.jpg") no-repeat 0 0;}
+#list6{width:150px;height:35px;background:url("../img/lnb/lnb6.jpg") no-repeat 0 0;}
+#list7{width:150px;height:35px;background:url("../img/lnb/lnb7.jpg") no-repeat 0 0;}
+#list8{width:150px;height:35px;background:url("../img/lnb/lnb8.jpg") no-repeat 0 0;}
+#list9{width:150px;height:35px;background:url("../img/lnb/lnb9.jpg") no-repeat 0 0;}
+
+
+#content_top span {color: #00a0f7;}
+#loginWrap {margin:130px auto 130px auto;width:329px;}
+#loginTitle{text-indent:-9999px;background:url("../img/loginTitle.jpg") no-repeat 0 0;width:100px;height:27px;}
+#loginsubtitle{text-indent:-9999px;background:url("../img/loginSubtitle.jpg") no-repeat 0 0;width:264px;height:13px;	margin-top:10px;}
+#loginWrap h3{font-size: 13px;font-family:'Nanum Gothic',monospace;color: #a2a2a2;margin-bottom: 25px;}
+#login_text h3 {font-size: 36px;font-family:'Nanum Gothic',monospace;color: #3a3a3a;}
+#login_form input[type="text"], #login_form input[type="password"] {padding-left: 5px;}
+#alwaysLogin{position:relative;clear:both;display:inline-block;*display:inline;zoom:1;padding-top:10px;}
+#login_form .loginId{margin-bottom:8px;*margin-bottom:5px;width:220px;height:36px;line-height:36px \0/;*line-height:36px;background:url("../img/idBox.jpg") no-repeat;background-position:0 0;border:0 none;}
+.loginId{*margin-top:-1px;}
+.loginPwd{*margin-top:1px;}
+
+#login_form .loginPwd{width:220px;height:36px;line-height:36px \0/;*line-height:36px;background:url("../img/pwdBox.jpg") no-repeat;background-position:0 0;border:0 none;}
+#loginText_wrap{float:left;width:234px;}
+.loginBtn{text-indent:-9999px;float:right;border:0 none;width:94px;height:80px;background:url("../img/loginBtn.jpg") no-repeat 0 0;}
+.loginBtn:hover{cursor:pointer;}
+input[type="checkbox"] {vertical-align:bottom;width: 15px;height: 15px;}
+.alwaysLoginBtn {	cursor:pointer;margin-left: 5px;font-size: 11px;line-height:11px;color: #a2a2a2;}
+#login_a {display:inline-block;*display:inline;zoom:1;margin-top: 30px;*margin-top: 27px;color: #504f4f;font-size: 11px;letter-spacing:-1px;}
+#login_a span{font-size:6px;}
+
+
+/* paging */
+.paging{margin-top:30px;text-align:center;}
+.paging a{margin:0 5px;display:inline-block;min-width:20px;height:20px;line-height:20px;text-align:center;vertical-align:top;}
+.paging_number{min-width:16px !important;border: 1px solid #d2d2d2;padding:0 2px;}
+.paging_on{background:#9fc5f3;color:#fff !important;}

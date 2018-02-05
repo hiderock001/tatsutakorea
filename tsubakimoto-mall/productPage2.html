@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+
+		<!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame
+		Remove this if you use the .htaccess -->
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+		<title>index | productPage</title>
+		<meta name="description" content="">
+		<meta name="author" content="hello">
+
+		<meta name="viewport" content="width=device-width; initial-scale=1.0">
+
+		<!-- Replace favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
+		<link rel="shortcut icon" href="/favicon.ico">
+		<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+		<link rel="stylesheet" type="text/css" href="css/init.css">
+		<link rel="stylesheet" type="text/css" href="css/layout_productPage.css">
+		<link rel="stylesheet" type="text/css" href="css/productPage.css">
+
+		<script type="text/javascript" src="./libs/jquery-1.7.1.min.js"></script>
+		<script type="text/javascript" src="./libs/jquery.easing.1.3.js"></script>
+		<script type="text/javascript" defer src="./js/banner_slider.js"></script>
+		<script type="text/javascript" defer src="./js/productMain.js"></script>
+		<script type="text/javascript" defer src="./js/pointer.js"></script>
+		<script type="text/javascript" defer src="./js/page.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function() {
+				productPageController();
+			});
+			window.onload = function() {
+				var getHeight = $("#product_imgtb").css("height");
+				var imgWidth = parseInt($("#product_imgtb_left img").css("width")) / 2;
+				var imgHeight = parseInt($("#product_imgtb_left img").css("height")) / 2;
+				$("#product_imgtb_left, #product_imgtb_right").css("height", getHeight);
+				$("#product_imgtb_left img").css({
+					"margin-left" : -1 * imgWidth + "px",
+					"margin-top" : -1 * imgHeight + "px"
+				});
+			};
+		</script>
+	</head>
+
+	<body>
+		<div id="pointer">
+			&nbsp;
+		</div>
+		<!-- 상단 네비부분 Start -->
+		<div id="navArea">
+			<div id="navCenter">
+				<span class="addressFont">Tel : 02-3141-3111&nbsp;&nbsp;&nbsp;&nbsp; Fax : 02-1234-1234&nbsp;&nbsp;&nbsp;&nbsp; Email : Tatsuta@Tatsuta.com</span>
+				<div id="navWrap">
+					<a class="navTxt" href="login.html">로그인</a>
+					<a>|</a>
+					<a class="navTxt">회원가입</a>
+					<a>|</a>
+					<a class="navTxt">고객센터</a>
+					<a>|</a>
+					<a class="navTxt">즐겨찾기 추가</a>
+				</div>
+			</div>
+		</div>
+		<!-- 상단 네비부분 End -->
+
+		<!-- 상단 로고, 검색 영역 Start -->
+		<div id="headerWrap">
+			<div id="header">
+				<h1><a id="logo" href="index.html">이곳은 로고가 들어가는 부분입니다.</a></h1>
+				<div id="searchAlign">
+					<form>
+						<input type="text" id="searchBox">
+						<input type="button" id="searchBtn">
+					</form>
+					<a id="topNotice">[공지] 타츠타 쇼핑몰페이지가 오픈하였습니다.</a>
+				</div>
+				<div id="topAd_silder">
+					<a><img src="./img/ad_img1.jpg" alt="상단광고 이미지"></a>
+				</div>
+			</div>
+		</div>
+		<!-- 상단 로고, 검색 영역 End -->
+
+		<!-- Contents Start -->
+		<div id="conWrap2">
+			<ul id="sideMenu">
+				<li class="on">
+					<p id="recentTitle">
+						최근 본 상품
+					</p>
+					<p id="recentProduct">
+						<img src="img/hitProduct1.jpg" alt="productImg">
+					</p>
+					<p id="recentPagination">
+						<a class="prevBtn">&lt;</a>
+						<a class="pageController">&nbsp;1/1&nbsp;</a>
+						<a class="nextBtn">&gt;</a>
+					</p>
+					<p id="recentAllpage">
+						전체보기
+					</p>
+				</li>
+				<li class="on">
+					<p id="likeTitle">
+						찜한 상품
+					</p>
+					<p id="likeProduct">
+						<img src="img/hitProduct1.jpg" alt="productImg">
+					</p>
+					<p id="likePagination">
+						<a class="prevBtn">&lt;</a>
+						<a class="pageController">&nbsp;1/1&nbsp;</a>
+						<a class="nextBtn">&gt;</a>
+					</p>
+					<p id="likeAllpage">
+						전체보기
+					</p>
+				</li>
+				<li>
+					<p id="topMover">
+						TOP ▲
+					</p>
+				</li>
+			</ul>
+			<div id="content_top">
+				<a>홈</a>
+				<span>&gt;</span>
+				<a>산업용모터</a>
+				<span>&gt;</span>
+				<a>GMMT S 미니 시리즈</a>
+			</div>
+			<div id="content_tb">
+				<div id="contnet_tbTOP">
+					<div id="content_tbTOP_navi">
+						&nbsp;
+					</div>
+					<ul>
+						<li id="tb_topText">
+							<span>GMM(T/S) 미니 시리즈</span>
+						</li>
+					</ul>
+				</div>
+				<div id="product_imgtb">
+					<div id="popMenu">
+						<ul id="popList">
+							<li>
+								<p>
+									<a href="productList.html">기어 모터 - 소형 (Gear Motor)</a>
+									<span>/</span>
+									<a>GMTA 시리즈</a>
+									<span>/</span>
+									<a>크로제모터 - 웜가속기 (Croise Motor)</a>
+									<span>/</span>
+									<a>감속기(웜 파워 드라이브)</a>
+									<span>/</span>
+									<a>TD트로이드라이브(웜감속기, 소형,경량)</a>
+
+								</p>
+								<p>
+									<a>베벨감속기(마이타기어박스)</a>
+									<span>/</span>
+									<a>DISCO무단변속기</a>
+								</p>
+							</li>
+							<li>
+								<p>
+									<a>캠클러치(Back Stop)</a>
+								</p>
+								<p>
+									<a>SR클러치(Back Stop)</a>
+								</p>
+							</li>
+							<li>
+								<p>
+									<a>쇼크댐버 (Shock Damper)</a>
+									<span>/</span>
+									<a>파워실린더 (Power Cylinder)</a>
+									<span>/</span>
+									<a>파워쟈키 (Power Jackey)</a>
+								</p>
+								<p>
+									<a>서보모터용 정밀 유성감속기 (Servomoter-Reducers)</a>
+								</p>
+							</li>
+							<li>
+								<p>
+									<a>플렉스 커플링 (Flexible Coupling)</a>
+									<span>/</span>
+									<a>커플링 (Coupling)</a>
+									<span>/</span>
+									<a>플렉스 커플링 (Jaw-Flex )</a>
+									<span>/</span>
+									<a>롤라체인커플링 (Roller Chain)</a>
+									<span>/</span>
+									<a>나일론 체인 커플링(Nylon Chain)</a>
+								</p>
+								<p>
+									<a>과부하보호장치</a>
+									<span>/</span>
+									<a>파워록(Power-Lock.) 체결구</a>
+								</p>
+							</li>
+							<li>
+								<p>
+									<a href="productPage1.html">무급유체인 (Lambda Chain)</a>
+									<span>/</span>
+									<a>드라이브 체인 (Drive Chains)</a>
+									<span>/</span>
+									<a>드라이브 체인, 악세서리(Drive Chain Accessories)</a>
+									<span>/</span>
+									<a>탑체인 (Top Chains)</a>
+								</p>
+								<p>
+									<a>탑체인부품 (Top Chain Components)</a>
+									<span>/</span>
+									<a>소형 컨베어체인 (Small Size Conveyor Chains)</a>
+									<span>/</span>
+									<a>대형 컨베어체인 (Large Size Conveyor Chains)</a>
+									<span>/</span>
+									<a>케이블베어 (Cableveyor)</a>
+								</p>
+							</li>
+							<li>
+								<p>
+									buy_button <a>스프라켓 (Fit Bore Sprocket)</a>
+									<span>/</span>
+									<a>Look스프라켓 (Look Sprocket)</a>
+									<span>/</span>
+									<a>RS기준 스프라켓 (RS Standard  Sprocket)</a>
+									<span>/</span>
+									<a>내환경스프라켓 (Environment Resistant Series)</a>
+								</p>
+								<p>
+									<a>RF스프라켓 (RF Sprocket)</a>
+									<span>/</span>
+									<a>컨베어체인용 스프라켓 (Sprockets for Conveyor Chains)</a>
+									<span>/</span>
+									<a>탑체인전용 스프라켓 (Sprockets for Top Chains)</a>
+								</p>
+							</li>
+							<li>
+								<p>
+									<a>체인 타이트너 (Chain tightener)</a>
+									<span>/</span>
+									<a>픞라스틱 레일 (Plastic Guide Rails)</a>
+									<span>/</span>
+									<a>타이밍벨트 (Timing Belts)</a>
+									<span>/</span>
+									<a>우레탄벨트 (Urethane Belt)</a>
+									<span>/</span>
+									<a>타이밍풀리 (Timing Pulley)</a>
+								</p>
+								<p>
+									<a>태형/치형 타이밍풀리 (Timing Pulley)</a>
+								</p>
+							</li>
+							<li>
+								<p>
+									<a>원터치 인스펙션도어 (One-Touch Inspection Door)</a>
+								</p>
+							</li>
+						</ul>
+					</div>
+					<div id="product_imgtb_left">
+						<img src="./img/productPage_img.gif" alt="">
+					</div>
+					<div id="product_imgtb_right" >
+						<div id="product_imgtb_right_block1">
+							<h3>배송정보</h3>
+							<table>
+								<tr>
+									<td width="100"><span>배송비</span></td>
+									<td><span>무료배송</span></td>
+								</tr>
+								<tr>
+									<td><span>평균배송일
+										<br>
+										&nbsp;</span></td>
+									<td><span>3일이내 배송가능
+										<br>
+										(토, 일, 공휴일 제외)</span></td>
+								</tr>
+
+								<tr>
+									<td><span>배송방법</span></td>
+									<td><span>택배배송</span></td>
+								</tr>
+								<tr>
+									<td><span>배송보험</span></td>
+									<td><span>없&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 음</span></td>
+								</tr>
+							</table>
+						</div>
+						<div id="product_imgtb_right_block2">
+
+							<h3>견적내기</h3>
+							<form action="" method="post" name="productOrderForm">
+								<table>
+									<tr>
+										<td width="100"><span>제품명</span></td>
+										<td width="170">
+										<select name="productName" id="productName">
+											<option value="제품을 선택하세요" selected="selected">제품을 선택하세요</option>
+											<option value="GMM T">GMM T</option>
+											<option value="GMM S">GMM S</option>
+										</select></td>
+									</tr>
+									<tr>
+										<td><span>감속비</span></td>
+										<td>
+										<select name="productReduction" id="productReduction">
+											<option value="감속비를 선택하세요" selected="selected">감속비를 선택하세요</option>
+											<option value="5">5</option>
+											<option value="10">10</option>
+											<option value="15">15</option>
+											<option value="20">20</option>
+											<option value="25">25</option>
+											<option value="30">30</option>
+											<option value="40">40</option>
+											<option value="50">50</option>
+											<option value="60">60</option>
+											<option value="80">80</option>
+											<option value="100">100</option>
+											<option value="120">120</option>
+											<option value="160">160</option>
+											<option value="200">200</option>
+											<option value="240">240</option>
+										</select></td>
+									</tr>
+									<tr>
+										<td><span>세부옵션</span></td>
+										<td>
+										<ul class="detailOption">
+											<li>
+												<input type="button" value="L">
+											</li>
+											<li>
+												<input type="button" value="R">
+											</li>
+											<li>
+												<input type="button" value="V">
+											</li>
+										</ul></td>
+									</tr>
+									<tr>
+										<td><span>브레이크</span></td>
+										<td>
+										<input type="radio" name="isBreak" id="noBreak" checked="checked"/>
+										<label for="noBreak">없음</label>
+										<input type="radio" name="isBreak" id="hasBreak"/>
+										<label for="hasBreak">있음</label></td>
+									</tr>
+
+									<tr>
+										<td><span>제품수량</span></td>
+										<td>
+										<input type="text" name="productNum" id="productNum" value="0" readonly="readonly">
+										<input type="button" class="plusBtn" name="productPlusbtn" value="+">
+										<input type="button" class="minusBtn" name="productMinusbtn" value="-">
+										</td>
+									</tr>
+									<tr>
+										<td colspan="2">
+										<div id="optionLine">
+											&nbsp;
+										</div></td>
+									</tr>
+									<tr>
+										<td><span>옵션</span></td>
+										<td>
+										<select name="productOption" id="productOption">
+											<option value="옵션을 선택하세요" selected="selected">옵션을 선택하세요</option>
+											<option value="UFS 13">UFS 13</option>
+											<option value="UFS 15">UFS 15</option>
+											<option value="UFS 25">UFS 25</option>
+											<option value="UFS 27">UFS 27</option>
+											<option value="UFS 37">UFS 37</option>
+											<option value="UFM 15">UFM 15</option>
+											<option value="UFM 26">UFM 26</option>
+											<option value="UFM 39">UFM 39</option>
+											<option value="UFM 48">UFM 48</option>
+										</select></td>
+									</tr>
+									<tr>
+										<td><span>옵션수량</span></td>
+										<td>
+										<input type="text" name="optionNum" id="optionNum" value="0" readonly="readonly">
+										<input type="button" class="plusBtn" name="optionPlusbtn" value="+">
+										<input type="button" class="minusBtn" name="optionMinusbtn" value="-">
+										</td>
+									</tr>
+								</table>
+								<div id="buttonWrap">
+									<input type="button" name="saveProduct" id="saveProduct" value="장바구니">
+									<input type="button" name="selectProduct" id="selectProduct" value="견적추가">
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+				<ul id="tabMenu">
+					<li>
+						<span>상세설명</span>
+					</li>
+					<li>
+						<span>설계도면</span>
+					</li>
+				</ul>
+				<form name="" id="selectTable">
+					<table class="productBuyList productTable">
+						<tr>
+							<th width="*" class="productName">품번</th>
+							<th width="120" class="productName">시리즈명</th>
+							<th width="80">감속비</th>
+							<th width="80">브레이크</th>
+							<th width="80">세부옵션</th>
+							<th width="80">제품수량</th>
+							<th width="120">단가</th>
+							<th width="120">합계</th>
+							<th width="40">삭제</th>
+						</tr>
+						<tr>
+							<td class="productName">-</td>
+							<td class="productName">-</td>
+							<td>-</td>
+							<td>-</td>
+							<td>-</td>
+							<td>-</td>
+							<td>-</td>
+							<td>-</td>
+							<td>-</td>
+						</tr>
+					</table>
+
+					<table class="productBuyList optionTable">
+						<tr>
+							<th width="*" class="productName">옵션명</th>
+							<th width="80">옵션수량</th>
+							<th width="120">단가</th>
+							<th width="120">합계</th>
+							<th width="40">삭제</th>
+						</tr>
+						<tr>
+							<td class="productName">-</td>
+							<td>-</td>
+							<td>-</td>
+							<td>-</td>
+							<td>-</td>
+						</tr>
+					</table>
+					<table id="resultTable">
+						<tr>
+							<td>
+								<span id="totlaTxt">총 구매가격</span>			
+							</td>
+							<td>
+								<input type="hidden" name="price" id="priceResult" value="0" readonly="readonly"/>
+								<span id="price">0</span>
+								<span id="won">원</span>
+							</td>
+							<td>
+								<input type="button" id="Purchase_button"/>
+							</td>
+						</tr>
+					</table>				
+				</form>
+				<div class="line">&nbsp;</div>
+				<div id="contentDisplay">
+					<img src="img/productPageTab_1.jpg" alt="productPageTab">
+				</div>
+			</div>
+		</div>
+		<!-- Contents End -->
+
+		<!-- footer Start -->
+		<!-- 회사소개, 이용약관등등 -->
+		<div id="footerWrap">
+			<div id="footer">
+				<div id="footTxt">
+					<a class="navTxt">회사소개</a>
+					<a>|</a>
+					<a class="navTxt">이용약관</a>
+					<a >|</a>
+					<a class="navTxt">개인정보취급방침</a>
+					<a>|</a>
+					<a class="navTxt">이메일무단수집거부</a>
+				</div>
+			</div>
+		</div>
+		<!-- footer end -->
+
+		<!-- copy Start -->
+		<!-- 저작권부분 -->
+		<div id="copy">
+			<p class="tatsutaLogo">
+				&nbsp;
+			</p>
+			<div class="addr">
+				<p>
+					서울특별시 마포구 독막로 129 균빌딩 5층 타츠타 대표이사 박민희 통신판매업신고 : 麻浦第000000号
+				</p>
+				<p>
+					TEL: 02-1234-1234&nbsp;&nbsp;&nbsp; FAX: 02-1234-1234&nbsp;&nbsp;&nbsp; MAIL : tatsuta@tatsuta.com
+				</p>
+			</div>
+			<p id="copyTxt">
+				Copyright ⓒ TATSUTA.  All Rights Reserved.
+			</p>
+		</div>
+
+		<!-- copy End -->
+	</body>
+</html>

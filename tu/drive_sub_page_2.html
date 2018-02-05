@@ -1,0 +1,107 @@
+<script type="text/javascript">
+$(document).ready(function(){
+	$(".data_table tr td:first-child").css("font-weight","bold").css("text-align","left").css("padding-left","20px");	
+	initEventListener();
+
+	$(".top").click(function(e){
+		var targetOffset= $("body").offset().top;
+		$("html, body").animate({scrollTop: targetOffset}, 0);
+		e.preventDefault();	
+	});
+});
+// 버튼에 이벤트를 리스너를 등록합니다.
+		function initEventListener(){
+			$(".drive_1 a, .bum_drive a, .pro_list li a").click(function(e){ 
+				
+				// 버튼이 눌러지는 경우 페이지를 로딩합니다.
+				loadPage($(this).attr("href"));	
+				return false;
+			});
+		}
+		// 페이지를 로딩하는 함수입니다.
+		function loadPage(strPage){
+			$.post(strPage, null, addPage, "html");
+			
+		}
+	
+		function addPage(strInfo){
+			$("#sub_right").html(strInfo);
+		}
+</script>
+			
+				<div class="info_box">
+					<h4><img src="img/h4_1.png" alt="드라이브체인" /></h4>
+					<p>드라이브 체인과 스프로킷을 통해 모터 등의 동력을 긴장으로 피 동기에 전달하는 기계 요소 입니다. 큰 감속비를 업을 수 있는 측간 거리의 자유도가 높은 양면 사용할 수 다축 전동이 가능 등 뛰어난 특징을 가지고 있습니다.</p>
+				</div>
+				<div class="view_info_box">
+					<div class="view_left">
+						<img src="img/view_drive_1.jpg" alt="" />
+					</div>
+					<div class="view_right">
+						<h5>범용 드라이브 체인</h5>
+						<dl class="pro_info">
+							<dt>세계에서 가장 신뢰하는 브랜드 <br /> 츠바키 RS 롤러 체인</dt>
+							<dd>JIS,ASME,SO에 준거하여 세계 규격의 드라이브 체인입니다. 드라이브 체인은 일반적으로 저속 대 하중에 적합한 경제적인 동력 장치로서 폭넓게 사용하고 있습니다. 사용방법 윤활방법을 응용하면 더욱 고속으로 사용하실 수도 있습니다.</dd>
+						</dl>
+						<img src="img/eco_go.png" alt="" class="eco_go" />
+					</div>
+				</div>
+				<div class="info_box">
+					<h4><img src="img/h4_2.png" alt="데이터 일람 / 다운로드" /></h4>
+				</div>
+				<div class="data_wrap">
+					<table class="data_table" summary="데이터 일람 및 다운로드">
+						<colgroup>
+							<col width="50%" />
+							<col width="30%" />
+							<col width="20%" />
+						</colgroup>
+						<tbody>
+							<tr>
+								<td>드라이브 체인 카탈로그 일본어</td>
+								<td><a href="#"><img src="img/ebook.jpg" alt="e-book" /></a></td>
+								<td><a href="#"><img src="img/pdf.jpg" alt="pdf" /></a></td>
+							</tr>
+							<tr>
+								<td>드라이브 체인 카탈로그 영문</td>
+								<td><a href="#"><img src="img/ebook.jpg" alt="e-book" /></a></td>
+								<td><a href="#"><img src="img/pdf.jpg" alt="pdf" /></a></td>
+							</tr>
+							<tr>
+								<td>드라이브 체인 카탈로그 한국어</td>
+								<td><a href="#"><img src="img/ebook.jpg" alt="e-book" /></a></td>
+								<td><a href="#"><img src="img/pdf.jpg" alt="pdf" /></a></td>
+							</tr>
+							<tr>
+								<td>사용설명서 일본어</td>
+								<td><a href="#"><img src="img/ebook.jpg" alt="e-book" /></a></td>
+								<td><a href="#"><img src="img/pdf.jpg" alt="pdf" /></a></td>
+							</tr>
+							<tr>
+								<td>도면 데이터 다운로드</td>
+								<td colspan="2"><a href="#"><img src="img/2d.jpg" alt="2D CAD" /></a></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div class="info_box">
+					<h4><img src="img/h4_3.png" alt="제품 라인업" /></h4>
+				</div>
+				<ul class="pro_list">
+					<li>
+						<a href="drive_sub_page_3.html" class="top"><img src="img/drive_1.jpg" alt="" /></a>
+						<div>
+							<h5>RS® 롤러 체인</h5>
+							<p class="info_p">ISO "A"에 해당하는 체인입니다. 최신 모델의 G7-EX (RS40 ~ 240)는 기존 제품에 비해 마모 수명을 2 배 전동 능력 33 % 향상 시켰습니다.</p>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="img/drive_2.jpg" alt="" /></a>
+						<div>
+							<h5>BS / DIN 규격 RS® 롤러 체인</h5>
+							<p class="info_p">주로 유럽에서의 설비에 사용되는 BS / DIN 규격에 해당하는 체인입니다. 최신 모델의 GT4 winner는 G7-EX로 기른 노하우를 살려 기존 제품에 비해 마모 수명 2 배를 실현했습니다.</p>
+						</div>
+					</li>
+				</ul>
+			
+		

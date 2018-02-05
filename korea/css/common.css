@@ -1,0 +1,44 @@
+@charset "utf-8";
+
+html, body{width:100%;}
+body{background:url(../img/body_bg.jpg);}
+#header{width:100%;height:77px;background:url(../img/header_bg.jpg) repeat-x;}
+.header_inner{position:relative;margin:0 auto;padding-top:30px;width:942px;*zoom:1;}
+.header_inner:after{content:"";display:block;clear:both;}
+.logo{float:left;}
+.gnb{float:left;margin-left:110px;*zoom:1;}
+.gnb:after{content:"";display:block;clear:both;}
+.gnb li{float:left;margin-right:54px;}
+.gnb li a{display:block;padding:0 10px;line-height:40px;font-size:15px;color:#515151;font-weight:bold;}
+.header_inner select{float:right;margin-right:3px;margin-top:10px;width:128px;height:21px;border:1px solid #ddd;color:#999;}
+.lan_box{position:absolute;top:10px;right:3px;}
+#contents{width:100%;}
+#footer{width:100%;background-color:#212121;}
+.footer_inner{padding:30px 0;margin:0 auto;width:942px;}
+
+/* footer */
+.f_left{padding:27px 58px 27px 0;width:170px;border-right:1px solid #686868;}
+.f_logo{}
+.footer_inner div{float:left;}
+.footer_inner:after{content:"";display:block;clear:both;}
+.f_right{padding-left:80px;}
+.footer_inner address{font-style:normal;color:#ccc;line-height:18px;}
+
+/* skip */
+#skipNavi{position:relative}
+#skipNavi a{display:block;overflow:hidden;width:1px;height:1px;margin-bottom:-1px;background-color:#252525;font-size:12px;font-weight:bold;color:#FFF;text-align:center;white-space:nowrap;}
+#skipNavi a:focus,#skipNavi a:active{width:100%;height:auto;padding:8px 0px;}
+
+
+/* banner */
+.main_banner_wrap{position:relative;height:274px;background:url(../img/banner_bg.jpg) repeat-x;z-index:100;}
+.main_rolling{margin:0 auto;width:942px;}
+.main_rolling{position:relative;overflow:hidden;}
+.rolling{width:5652px;}
+.rolling:after{content:"";display:block;clear:both;}
+.rolling li{float:left;width:942px;height:274px;}
+.rolling img{width:942px;height:274px;}
+.slide_prev{position:absolute;top:125px;left:0px;z-index:1000;}
+.slide_prev img{cursor:pointer;}
+.slide_next{position:absolute;top:125px;right:0px;z-index:1000;}
+.slide_next img{cursor:pointer;}

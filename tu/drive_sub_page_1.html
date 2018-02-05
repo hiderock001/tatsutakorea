@@ -1,0 +1,89 @@
+<script type="text/javascript">
+	$(document).ready(function(){ 
+			initEventListener();	
+		});
+
+		
+		
+		// 버튼에 이벤트를 리스너를 등록합니다.
+		function initEventListener(){
+			$(".drive_1 a, .bum_drive a, .pro_list li a").click(function(e){ 
+				
+				// 버튼이 눌러지는 경우 페이지를 로딩합니다.
+				loadPage($(this).attr("href"));	
+				return false;
+			});
+		}
+		// 페이지를 로딩하는 함수입니다.
+		function loadPage(strPage){
+			$.post(strPage, null, addPage, "html");
+			
+		}
+	
+		function addPage(strInfo){
+			$("#sub_right").html(strInfo);
+		}
+</script>
+			
+				<div class="info_box">
+					<h4><img src="img/h4_1.png" alt="드라이브체인" /></h4>
+					<p>드라이브 체인과 스프로킷을 통해 모터 등의 동력을 긴장으로 피 동기에 전달하는 기계 요소 입니다. 큰 감속비를 업을 수 있는 측간 거리의 자유도가 높은 양면 사용할 수 다축 전동이 가능 등 뛰어난 특징을 가지고 있습니다.</p>
+				</div>
+				<ul class="pro_list">
+					<li>
+						<a href="drive_sub_page_2.html"><img src="img/drive_1.jpg" alt="" /></a>
+						<div>
+							<h5>범용 드라이브 체인</h5>
+							<p class="info_p">JIS, ANSI, ISO에 준거 한 세계 표준의 드라이브 체인. 최신 모델의 G7-EX (RS40 ~ 240)는 기존 제품에 비해 마모 수명을 2배 전동 능력 33% 향상을 실현했습니다. BS/DIN 규격의 체인도 구비하고 있습니다.</p>
+							<p class="line_p">드라이브 체인 카탈로그 한국어<a href="#"><img src="img/ebook.jpg" alt="" class="ebook" /></a><a href="#"><img src="img/pdf.jpg" alt="" class="ebook" /></a></p>
+							<p class="line_up"><a href="#">Line-up</a></p>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="img/drive_2.jpg" alt="" /></a>
+						<div>
+							<h5>무급유 드라이브 체인</h5>
+							<p class="info_p">동백 람다 체인은 업계 최초로 특수 함유 부시를 채용 한 체인입니다. 출시 이후 많은 업종·용도에 채용되어 그 성능을 인정 받고 있습니다. 무급유·긴 수명에 대한 고객의 요구에 폭넓게 대응하고 총 비용 절감에 기여합니다.</p>
+							<p class="line_p">드라이브 체인 카탈로그 한국어<a href="#"><img src="img/ebook.jpg" alt="" class="ebook" /></a><a href="#"><img src="img/pdf.jpg" alt="" class="ebook" /></a></p>
+							<p class="line_up"><a href="#">Line-up</a></p>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="img/drive_3.jpg" alt="" /></a>
+						<div>
+							<h5>강력 드라이브 체인</h5>
+							<p class="info_p">강력한 드라이브 체인은 플레이트 형상과 두께를 크게하는 것으로, 컴팩트 한 디자인이면서 뛰어난 전동 능력, 허용 하중, 인장 강도를 실현. 다양한 제품 구색에서 다양한 요구에 부응합니다.</p>
+							<p class="line_p">드라이브 체인 카탈로그 한국어<a href="#"><img src="img/ebook.jpg" alt="" class="ebook" /></a><a href="#"><img src="img/pdf.jpg" alt="" class="ebook" /></a></p>
+							<p class="line_up"><a href="#">Line-up</a></p>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="img/drive_4.jpg" alt="" /></a>
+						<div>
+							<h5>내 환경 드라이브 체인</h5>
+							<p class="info_p">부식 분위기 등의 내 환경성이 요구되는 용도로 사용하실 체인. 스테인레스 사양, 각종 코팅 사양, 저소음 체인, 내한 체인 등 다양하게 구색하고 있습니다.</p>
+							<p class="line_p">드라이브 체인 카탈로그 한국어<a href="#"><img src="img/ebook.jpg" alt="" class="ebook" /></a><a href="#"><img src="img/pdf.jpg" alt="" class="ebook" /></a></p>
+							<p class="line_up"><a href="#">Line-up</a></p>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="img/drive_5.jpg" alt="" /></a>
+						<div>
+							<h5>특수 체인</h5>
+							<p class="info_p">랙 & 피니언 기어 대신에 사용되는 핀 기어 드라이브 체인과 주로 매달아 용도로 사용되는 잎 체인, 가로 방향으로 크게 구부리 카브 체인 등이 있습니다.</p>
+							<p class="line_p">드라이브 체인 카탈로그 한국어<a href="#"><img src="img/ebook.jpg" alt="" class="ebook" /></a><a href="#"><img src="img/pdf.jpg" alt="" class="ebook" /></a></p>
+							<p class="line_up"><a href="#">Line-up</a></p>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="img/drive_6.jpg" alt="" /></a>
+						<div>
+							<h5>드라이브 체인 악세사리</h5>
+							<p class="info_p">드라이브 체인 액세서리로 체인 텐셔너, 각종 잘라 이어 · 연결 공구 터미널 손잡이 자동 급유기 체인 마모 측정 스케일과 동심도 용이지 레이저 등 풍부하게 라인 업하고 있습니다</p>
+							<p class="line_p">드라이브 체인 카탈로그 한국어<a href="#"><img src="img/ebook.jpg" alt="" class="ebook" /></a><a href="#"><img src="img/pdf.jpg" alt="" class="ebook" /></a></p>
+							<p class="line_up"><a href="#">Line-up</a></p>
+						</div>
+					</li>
+				</ul>
+			
+	

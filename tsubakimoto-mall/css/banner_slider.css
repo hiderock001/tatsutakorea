@@ -1,0 +1,35 @@
+@charset "UTF-8";
+/* CSS Document */
+
+.banner_slider{float:left;width:682px;height:315px;background-color:#ececec;}
+.banner_slider .banner_container{position:relative;width:682px;height:315px;overflow:hidden;}
+.banner_slider .banner_container button{position:absolute;}
+#btn_prev_banner{text-indent:-9999px;margin-top:-19px;left:15px;top:50%;width:29px;height:39px;border:0 none;background:url("../img/prevBtn.png") no-repeat 0 0;}
+#btn_prev_banner:hover, #btn_next_banner:hover{cursor:pointer;}
+#btn_next_banner{text-indent:-9999px;margin-top:-19px;right:15px;top:50%;width:29px;height:39px;border:0 none;background:url("../img/nextBtn.png") no-repeat 0 0;}
+.banner_slider .banner_container #banner_content{position:absolute;/* 980*4 */width: 2732px;}
+.banner_slider .banner_container #banner_content img{float:left;}
+.banner_slider .banner_nav_container{position:absolute;width:100%;left:45px;height:30px;bottom:8px;line-height:30px;vertical-align:middle;}
+.banner_slider .banner_nav_container #banner_nav{list-style:none;border:0px solid #ff0000;}
+.banner_slider .banner_nav_container ul#banner_nav li{display:inline;width:120px;height:27px;float:left;}
+.banner_slider .banner_nav_container ul#banner_nav li a{float:left;font-size:8.8pt;letter-spacing:-0.2px;width:120px;height:27px;line-height:27px;text-align:center;vertical-align:middle;background:url("../img/bannerSelector.jpg") no-repeat 0 0;	}
+.banner_slider .banner_nav_container ul#banner_nav li a.select{color:red;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
